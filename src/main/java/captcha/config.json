@@ -1,0 +1,25 @@
+{
+	"captchars": [
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+		"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+	],
+	"storedPath": "D:\\Captcha\\",
+	"imgCountStart" : 1001,
+	"imgCountEnd" : 1010,
+	"width" : 100,
+	"height" : 30,
+	"strs" : 5,
+	"strRandomRange" : 0,
+	"strLength" : 1,
+	"strShearRange" : 5,
+	"fontSize" : 30,
+	"fontRotate" : 1,
+	"fontHorizontalInterval" : 20,
+	"words" : 25,
+	"nodes" : 60,
+	"lines" : 1,
+	"lineRandomRange" : 1,
+	"relativelyColor" : "false",
+	"useAlphaStr" : "true"
+}

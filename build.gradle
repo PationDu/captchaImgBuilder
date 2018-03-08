@@ -1,0 +1,48 @@
+// 打包成JAR時將 dependencies 包進去
+buildscript {
+	repositories {
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies {
+		classpath "com.github.jengelman.gradle.plugins:shadow:2.0.2"
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: "com.github.johnrengelman.shadow"
+
+// jar 是只包源碼    shadowJar 則會包 dependencies
+//jar {
+shadowJar {
+	baseName = 'CaptchaImgBuilder'
+	version =  '0.1.0'
+	// jar包在執行中出現“沒有主清單屬性”錯誤時要加下面這段
+	manifest {
+		attributes 'Main-Class': 'captcha.App'
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'captcha.App'
+
+/**
+ * Setting encoding during compilation in Java and Test classes
+ */
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+dependencies {
+
+	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.2'
+
+}
