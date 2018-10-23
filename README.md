@@ -1,0 +1,2 @@
+# captchaImgBuilder
+大量製造名為Captcha的垃圾驗證圖片
